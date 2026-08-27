@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+ body{
+ background-image:url(photo_2026-08-14_17-09-04.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ overflow: hidden;
+           }
+#h1-style {
+    text-align: center;
+    font-size: 70px;
+    color: #303870;
+    text-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+    margin-left: 0;
+}
+
+ .center{
+    text-align: center;
+    font-family: copperplate cc;
+    color: rgb(245, 230, 213);
+ }
+
+.search-box {
+    position: absolute;
+    left: 50%;
+    top: 380px;
+    transform: translateX(-50%);
+}
+
+.choose {
+    position: absolute;
+    left: 50%;
+    top: 500px;
+    transform: translateX(-50%);
+}
+.choose button{
+    font-size: 18px;
+     padding: 15px 25px;
+     border:none;
+    border-radius: 15px;
+    margin:5px;
+}
+button{
+background-color: rgb(179, 183, 197);
+color:rgb(8, 0, 8);
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="center">
+    <br><br>
+<h1 id="h1-style">PATHGUIDE</h1>
+</div>
+
+<form  onsubmit="search(); return false;">
+  <div style="text-align:center;  direction:rtl;">
+    <input id="searchsubmit" type="text"  placeholder="ماذا تريد ان تتعلم؟"  name="query" style="width: 400px; height: 50px; font-size:
+     20px; border-radius: 15px; background-color: rgb(179, 183, 197); border-color: #303870";/>
+    <input id=searchinput type="submit" value="بحث" onclick="search()" style="width: 100px; height: 50px; font-size: 20px; border-radius: 15px;
+     background-color: rgb(179, 183, 197);">
+</div>
+
+</form>
+<br>
+ </div> 
+    <div class="choose" style="text-align: center;
+ 
+ border-radius: 15px; left: 50%;
+top: 300px;">
+        <h2>استكشف اهتماماتك</h2>
+    <button onclick="location.href='drawing.html'">رسم</button>
+    <br>
+    <button onclick="location.href='photography.html'">تصوير</button><br>
+    <button onclick="location.href='programming.html'">لغات البرمجة</button><br>
+    <button onclick="location.href='language.html'">اللغة الانكليزية</button>
+</div>
+
+
+<script>
+function choose(button){
+    document.getElementById("searchinput").value=button;
+}
+
+
+</script>
+<script>
+
+function search() {
+
+    let text = document.getElementById("searchsubmit").value.trim();
+
+    if (text == "اللغة الانكليزية") {
+        location.href = "language.html";
+    }
+    if(text== "لغات البرمجة"){
+        location.href = "programming.html"}
+    if(text=="رسم"){
+        location.href="drawing.html"
+        
+    }
+    if(text=="تصوير"){
+        location.href="photography.html"
+
+    }
+}
+
+</script>
+
+</body>
+</html>
