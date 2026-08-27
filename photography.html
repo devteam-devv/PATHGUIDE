@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+body{
+    background-image:url(photo_2026-08-14_17-09-04.jpg );
+    background-repeat: no-repeat;
+ background-size: cover;
+ overflow: hidden;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.categories button {
+    width: 220px;
+    padding: 20px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: rgb(179, 183, 197);
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background-color: #303870;
+    color: white;
+}
+#courses {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background-color: rgba(255,255,255,0.85);
+    text-align: center;
+}
+.order {
+    width: 100%;
+    text-align: center;
+}
+
+
+</style>
+</head>
+
+<body>
+ <h1 style="text-align: center; font-size: 40px;"> تصوير </h1>
+
+<div class="categories">
+    <div id="order">
+    <button onclick="showCourses('order')"> تصوير </button>
+
+</div>
+</div>
+<div id="courses"></div>
+<script>
+function showCourses(type) {
+
+    let courses = document.getElementById("courses");
+
+    if (courses.innerHTML != "") {
+        courses.innerHTML = "";
+        return;
+    }
+if (type == "order") {
+    courses.innerHTML = `
+        <h2> تصوير </h2>
+        <p>Tutorials</p>
+        <a href="https://share.google/6pR9DCoS9Xc0lkYjd">Tutorials website</a><br>
+        <p>youtube</p>
+        <a href="https://www.youtube.com/playlist?list=PL7l5DODoBYhEr10E3nZBzRIEJ4IlFHMK7">مسار التعلم</a><br>
+<p> معارف</p>
+<a href="[https://www.m3aarf.com/certificate/17940/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%AA%D8%B5%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%89-%D8%A8%D8%A7%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84-video](https://www.m3aarf.com/certificate/17940/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%AA%D8%B5%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%89-%D8%A8%D8%A7%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84-video)">كورس التصوير في الموبايل</a>
+<br>
+`;}
+}
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="UTF-8">
+    <style>
+body{
+    background-image:url(photo_2026-08-14_17-09-04.jpg );
+    background-repeat: no-repeat;
+ background-size: cover;
+ overflow: hidden;
+ background-attachment: fixed;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.categories button {
+    width: 220px;
+    padding: 20px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: rgb(179, 183, 197);
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background-color: #303870;
+    color: white;
+}
+#courses {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background-color: rgba(255,255,255,0.85);
+    text-align: center;
+}
+.order {
+    width: 100%;
+    text-align: center;
+}
+
+
+</style>
+   </head>
+<body>
+   <h1 style="text-align: center; font-size: 40px;"> رسم </h1>
+
+<div class="categories">
+    <div id="order">
+    <button onclick="showCourses('order')"> رسم </button>
+
+</div>
+</div>
+<div id="courses"></div>
+<script>
+function showCourses(type) {
+
+    let courses = document.getElementById("courses");
+
+    if (courses.innerHTML != "") {
+        courses.innerHTML = "";
+        return;
+    }
+if (type == "order") {
+    courses.innerHTML = `
+        <h2> رسم </h2>
+<p>youtube</p>
+<a href="https://youtube.com/@prokotv?si=hfF_PMzHIclO1e9S">proko</a><br>
+<a href="https://youtube.com/@sinixdesign?si=X9N6yNa5A9cPX4mp">Sinix Design</a><br>
+<a href="https://youtube.com/@learntopaintwatercolor?si=YOh3YoV493lA3_jQ"> Watercolor Instruction</a><br>
+<p>معارف</p>
+<a href="https://youtube.com/@learntopaintwatercolor?si=YOh3YoV493lA3_jQ">اساسيات الرسم</a><br>
+<a href="https://www.m3aarf.com/certificate/6605/%D8%AF%D9%88%D8%B1%D8%A9-%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9-%D9%84%D8%AA%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%B1%D8%B3%D9%85-%D8%A8%D8%A7%D9%84%D8%A7%D9%84%D9%88%D8%A7%D9%86-%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%8A%D8%A9-Watercolor-Painting-video">الوان مائية</a>
+
+`;}
+}
+</script>
+</body>
+</html>
