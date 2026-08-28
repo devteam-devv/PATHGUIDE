@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-image:url(photo_2026-08-14_17-09-04.jpg );
+    background-repeat: no-repeat;
+ background-size: cover;
+ overflow-x: hidden;
+ background-attachment: fixed;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.categories button {
+    width: 220px;
+    padding: 20px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: rgb(179, 183, 197);
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background-color: #303870;
+    color: white;
+}
+#courses {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background-color: rgba(255,255,255,0.85);
+    text-align: center;
+}
+.order {
+    width: 100%;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+<h1 style="text-align: center; font-size: 40px;"> اللغة الفرنسية</h1>
+
+<div class="categories">
+    <div id="order">
+    <button onclick="showCourses('order')">اللغة الفرنسية </button>
+
+</div>
+</div>
+<div id="courses"></div>
+<script>
+function showCourses(type) {
+
+    let courses = document.getElementById("courses");
+
+    if (courses.innerHTML != "") {
+        courses.innerHTML = "";
+        return;
+    }
+if (type == "order") {
+    courses.innerHTML = `
+        <h2>اللغة الفرنسية</h2>
+<a href="https://youtu.be/Np-gLAQl-so?si=pZAHWxpAr--6Cicu">اختبار تحديد المستوى </a><br>
+       <p> youtube </p>
+       <a href="https://youtu.be/8M__AwkeP3o?si=PtffgUEkS0uTObzW"> podcast </a><br>
+       <a href="https://www.youtube.com/@coffeebreakfrenchofficial">course  </a>
+    <p> apps</p>
+    <a href="https://play.google.com/store/apps/details?id=com.ewa.ewaapp&hl=en-US&pli=1">EWA for android</a><br>
+    <a href="https://apps.apple.com/us/app/ewa-learn-languages/id1200778841">EWA for apple</a>
+    `;}
+}</script>
+</body>
+
+
+</html>
