@@ -1,157 +1,225 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+
     <style>
+
+        body {
+            background-image: url(photo_2026-08-14_17-09-04.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        #h1-style {
+            text-align: center;
+            font-size: 70px;
+            color: #303870;
+            text-shadow: 2px 3px 6px rgba(0,0,0,0.25);
+            margin-left: 0;
+        }
+
+        .center {
+            text-align: center;
+            font-family: copperplate cc;
+            color: rgb(245, 230, 213);
+        }
+
+        .search-box {
+            position: absolute;
+            left: 50%;
+            top: 380px;
+            transform: translateX(-50%);
+        }
+
+        .choose {
+            position: absolute;
+            left: 50%;
+            top: 500px;
+            transform: translateX(-50%);
+        }
+
+        .choose button {
+            font-size: 18px;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+        }
+
+        .choose button:hover {
+            background-color: #303870;
+            color: white;
+        }
+
+        button {
+            background-color: rgb(179, 183, 197);
+            color: rgb(8, 0, 8);
+        }
+
+
+        /* =========================
+           الموبايل
+        ========================= */
+
         @media (max-width: 600px) {
 
-    #h1-style {
-        font-size: 40px;
-        text-align: center;
-    }
+            #h1-style {
+                font-size: 45px;
+                margin-top: 30px;
+            }
 
-    .search-box {
-        position: static;
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-    }
+            .search-box {
+                position: static;
+                transform: none;
+                margin-top: 30px;
+                text-align: center;
+            }
 
-    .choose {
-        position: static;
-        text-align: center;
-        margin-top: 30px;
-    }
+            #searchsubmit {
+                width: 70% !important;
+                height: 45px !important;
+                font-size: 16px !important;
+            }
 
-    .choose button {
-        font-size: 16px;
-        padding: 12px 18px;
-        margin: 5px;
-    }
-}
- body{
- background-image:url(photo_2026-08-14_17-09-04.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- background-attachment: fixed;
- overflow-x: hidden;
-           }
-#h1-style {
-    text-align: center;
-    font-size: 70px;
-    color: #303870;
-    text-shadow: 2px 3px 6px rgba(0,0,0,0.25);
-    margin-left: 0;
-}
+            #searchinput {
+                width: 25% !important;
+                height: 45px !important;
+                font-size: 16px !important;
+            }
 
- .center{
-    text-align: center;
-    font-family: copperplate cc;
-    color: rgb(245, 230, 213);
- }
+            .choose {
+                position: static;
+                transform: none;
+                margin-top: 40px;
+                text-align: center;
+            }
 
-.search-box {
-    position: absolute;
-    left: 50%;
-    top: 380px;
-    transform: translateX(-50%);
-}
+            .choose h2 {
+                font-size: 22px;
+            }
 
-.choose {
-    position: absolute;
-    left: 50%;
-    top: 500px;
-    transform: translateX(-50%);
-}
-.choose button{
-    font-size: 18px;
-     padding: 15px 25px;
-     border:none;
-    border-radius: 15px;
-    margin:5px;
-}
-.choose button:hover {
-    background-color: #303870;
-    color: white;
-}
-button{
-background-color: rgb(179, 183, 197);
-color:rgb(8, 0, 8);
+            .choose button {
+                font-size: 16px;
+                padding: 12px 20px;
+                margin: 5px;
+            }
 
-}
+        }
 
-</style>
+    </style>
+
 </head>
+
 
 <body>
 
-<div class="center">
-    <br><br>
-<h1 id="h1-style">PATHGUIDE</h1>
-</div>
+    <div class="center">
 
-<form  onsubmit="search(); return false;">
-  <div style="text-align:center;  direction:rtl;">
-    <input id="searchsubmit" type="text"  placeholder="ماذا تريد ان تتعلم؟"  name="query" style="width: 400px; height: 50px; font-size:
-     20px; border-radius: 15px; background-color: rgb(179, 183, 197); border-color: #303870";/>
-    <input id=searchinput type="submit" value="بحث" onclick="search()" style="width: 100px; height: 50px; font-size: 20px; border-radius: 15px;
-     background-color: rgb(179, 183, 197);">
-</div>
+        <br><br>
 
-</form>
-<br>
- </div> 
-    <div class="choose" style="text-align: center;
- 
- border-radius: 15px; left: 50%;
-top: 300px;">
+        <h1 id="h1-style">PATHGUIDE</h1>
+
+    </div>
+
+
+    <form onsubmit="search(); return false;">
+
+        <div class="search-box" style="text-align:center; direction:rtl;">
+
+            <input
+                id="searchsubmit"
+                type="text"
+                placeholder="ماذا تريد ان تتعلم؟"
+                name="query"
+                style="width: 400px; height: 50px; font-size: 20px; border-radius: 15px; background-color: rgb(179, 183, 197); border-color: #303870;"
+            />
+
+            <input
+                id="searchinput"
+                type="submit"
+                value="بحث"
+                onclick="search()"
+                style="width: 100px; height: 50px; font-size: 20px; border-radius: 15px; background-color: rgb(179, 183, 197);"
+            >
+
+        </div>
+
+    </form>
+
+
+    <div class="choose">
+
         <h2>استكشف اهتماماتك</h2>
-    <button onclick="location.href='drawing.html'">رسم</button>
-    <br>
-    <button onclick="location.href='photography.html'">تصوير</button><br>
-    <button onclick="location.href='programming.html'">لغات البرمجة</button><br>
-    <button onclick="location.href='language.html'">اللغة الانكليزية</button><br>
-    <button onclick="location.href='languagef.html'">اللغة الفرنسية</button><br>
-    <button onclick="location.href='mourse.html'">شفرة مورس</button>
-</div>
+
+        <button onclick="location.href='drawing.html'">رسم</button>
+        <br>
+
+        <button onclick="location.href='photography.html'">تصوير</button>
+        <br>
+
+        <button onclick="location.href='programming.html'">لغات البرمجة</button>
+        <br>
+
+        <button onclick="location.href='language.html'">اللغة الانكليزية</button>
+        <br>
+
+        <button onclick="location.href='languagef.html'">اللغة الفرنسية</button>
+        <br>
+
+        <button onclick="location.href='mourse.html'">شفرة مورس</button>
+
+    </div>
 
 
-<script>
-function choose(button){
-    document.getElementById("searchinput").value=button;
-}
+    <script>
+
+        function choose(button) {
+            document.getElementById("searchinput").value = button;
+        }
+
+    </script>
 
 
-</script>
-<script>
+    <script>
 
-function search() {
+        function search() {
 
-    let text = document.getElementById("searchsubmit").value.trim();
+            let text = document.getElementById("searchsubmit").value.trim();
 
-    if (text == "اللغة الانكليزية") {
-        location.href = "language.html";
-    }
-    if(text== "لغات البرمجة"){
-        location.href = "programming.html"}
-    if(text=="رسم"){
-        location.href="drawing.html"
-        
-    }
-    if(text=="تصوير"){
-        location.href="photography.html"
+            if (text == "اللغة الانكليزية") {
+                location.href = "language.html";
+            }
 
-    }
-    if(text=="اللغة الفرنسية"){
-        location.href="languagef.html"
-    }
-    if(text=="شفرة مورس"){
-        location.href="mourse.html"
-    }
-}
+            if (text == "لغات البرمجة") {
+                location.href = "programming.html";
+            }
 
-</script>
+            if (text == "رسم") {
+                location.href = "drawing.html";
+            }
+
+            if (text == "تصوير") {
+                location.href = "photography.html";
+            }
+
+            if (text == "اللغة الفرنسية") {
+                location.href = "languagef.html";
+            }
+
+            if (text == "شفرة مورس") {
+                location.href = "mourse.html";
+            }
+
+        }
+
+    </script>
 
 </body>
+
 </html>
